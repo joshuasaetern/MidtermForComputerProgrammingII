@@ -18,13 +18,13 @@ namespace MidtermForComputerProgrammingII
         decimal tax = 0.1m;
 
         //Constructors
-        public Order(String orderNumber, List<Product> products, String customerName)
+        public Order()
         {
             //Creates a random number for orderNumber
             this.orderNumber = rand.Next(10000000, 100000000).ToString();
             //Creates a List for products to be stored in
             this.products = new List<Product>();
-            this.customerName = customerName;
+            this.customerName = "NO NAME";
         }
 
         //Properties
@@ -48,13 +48,13 @@ namespace MidtermForComputerProgrammingII
             }
             return
                 $"Order Number: \n" +
-                $"this.orderNumber \n" +
+                $"{this.orderNumber} \n" +
                 $"-- Products \n" +
                 strProduct +
                 $"Subtotal: {SubTotal():C} \n" +
                 $"Tax: {this.tax} \n" +
                 $"Total Tax: {SubTax():C} \n" +
-                $"Total: {(SubTotal() - SubTax()):C}";
+                $"Total: {(SubTotal() + SubTax()):C}";
         }
         public decimal SubTotal()
         {

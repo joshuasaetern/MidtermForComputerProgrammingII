@@ -24,7 +24,7 @@
         <Rectangle HorizontalAlignment="Left" Height="402" Margin="568,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="222"/>
         <Label Content="Customer Name:" HorizontalAlignment="Left" Margin="279,23,0,0" VerticalAlignment="Top" FontSize="18"/>
         <TextBox x:Name="txtBoxCustomerName" HorizontalAlignment="Left" Margin="294,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="231" FontSize="14"/>
-        <RichTextBox Margin="279,94,253,77">
+        <RichTextBox Margin="279,94,253,77" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
             <FlowDocument>
                 <Paragraph>
                     <Run x:Name="runOrderDisplay" Text=""/>
@@ -32,7 +32,7 @@
             </FlowDocument>
         </RichTextBox>
         <Button x:Name="btnCompletePurchase" Content="Complete Purchase" HorizontalAlignment="Left" Margin="360,374,0,0" VerticalAlignment="Top" Click="btnCompletePurchase_Click"/>
-        <ListBox x:Name="listBoxPreviousOrders" Margin="596,61,38,351"/>
+        <ListBox x:Name="listBoxPreviousOrders" Margin="596,61,38,351" SelectionChanged="listBoxPreviousOrders_SelectionChanged"/>
         <RichTextBox Margin="578,94,20,77">
             <FlowDocument>
                 <Paragraph>

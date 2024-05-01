@@ -30,14 +30,20 @@ namespace MidtermForComputerProgrammingII
         {
             InitializeComponent();
 
+            //Attaches our completed orders list to the listbox
+            listBoxPreviousOrders.ItemsSource = completedOrders;
 
+            Order order = new Order();
+
+            currentOrder = order;
 
         }
 
         //Coffee Buttons
         private void btnDarkCoffee_Click(object sender, RoutedEventArgs e)
         {
-
+            currentOrder.AddProduct(inventory.CoffeeProducts[0]);
+            runOrderDisplay.Text = currentOrder.FormattedOrder();
         }
 
         private void btnMediumCoffee_Click(object sender, RoutedEventArgs e)
@@ -84,6 +90,11 @@ namespace MidtermForComputerProgrammingII
         
         //Misc
         private void btnCompletePurchase_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void listBoxPreviousOrders_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
