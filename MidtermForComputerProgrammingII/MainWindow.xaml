@@ -7,6 +7,39 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="402" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="249"/>
+        <Label Content="Coffee" HorizontalAlignment="Left" Margin="24,23,0,0" VerticalAlignment="Top" Width="76" FontSize="18"/>
+        <Label Content="Tea" HorizontalAlignment="Left" Margin="26,140,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Breakfast" HorizontalAlignment="Left" Margin="26,260,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Button x:Name="btnDarkCoffee" Content="Dark" HorizontalAlignment="Left" Margin="24,89,0,0" VerticalAlignment="Top" Width="65px" Click="btnDarkCoffee_Click"/>
+        <Button x:Name="btnMediumCoffee" Content="Medium" HorizontalAlignment="Left" Margin="100,89,0,0" VerticalAlignment="Top" Width="64" Click="btnMediumCoffee_Click"/>
+        <Button x:Name="btnLightCoffee" Content="Light" HorizontalAlignment="Left" Margin="180,89,0,0" VerticalAlignment="Top" Width="64" Click="btnLightCoffee_Click"/>
+        <Button x:Name="btnTeaGreen" Content="Green" HorizontalAlignment="Left" Margin="24,206,0,0" VerticalAlignment="Top" Width="65px" Click="btnTeaGreen_Click"/>
+        <Button x:Name="btnTeaBlack" Content="Black" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Center" Width="65px" Click="btnTeaBlack_Click"/>
+        <Button x:Name="btnTeaChai" Content="Chai" HorizontalAlignment="Left" Margin="180,206,0,0" VerticalAlignment="Top" Width="65px" Click="btnTeaChai_Click"/>
+        <Button x:Name="btnBreakfastSandwich" Content="Sandwich" HorizontalAlignment="Left" Margin="24,337,0,0" VerticalAlignment="Top" Width="65px" Click="btnBreakfastSandwich_Click"/>
+        <Button x:Name="btnBreakfastPastry" Content="Pastry" HorizontalAlignment="Left" Margin="100,337,0,0" VerticalAlignment="Top" Width="65px" Click="btnBreakfastPastry_Click"/>
+        <Button x:Name="btnBreakfastFruit" Content="Fruit" HorizontalAlignment="Left" Margin="180,337,0,0" VerticalAlignment="Top" Width="65px" Click="btnBreakfastFruit_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="402" Margin="264,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="299"/>
+        <Rectangle HorizontalAlignment="Left" Height="402" Margin="568,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="222"/>
+        <Label Content="Customer Name:" HorizontalAlignment="Left" Margin="279,23,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="txtBoxCustomerName" HorizontalAlignment="Left" Margin="294,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="231" FontSize="14"/>
+        <RichTextBox Margin="279,94,253,77">
+            <FlowDocument>
+                <Paragraph>
+                    <Run x:Name="runOrderDisplay" Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button x:Name="btnCompletePurchase" Content="Complete Purchase" HorizontalAlignment="Left" Margin="360,374,0,0" VerticalAlignment="Top" Click="btnCompletePurchase_Click"/>
+        <ListBox x:Name="listBoxPreviousOrders" Margin="596,61,38,351"/>
+        <RichTextBox Margin="578,94,20,77">
+            <FlowDocument>
+                <Paragraph>
+                    <Run x:Name="richTxtBoxPreviousDisplay" Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
 
     </Grid>
 </Window>
