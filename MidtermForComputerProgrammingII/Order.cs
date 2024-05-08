@@ -37,6 +37,11 @@ namespace MidtermForComputerProgrammingII
         {
             products.Add(product);
         }
+        public void RemoveProduct(int index)
+        {
+            //Removes from product list using given index
+            products.RemoveAt(index);
+        }
         public String FormattedOrder()
         {
             //String for storing product info
@@ -44,15 +49,15 @@ namespace MidtermForComputerProgrammingII
             //Loop through products and add to our String
             for (int i = 0; i < products.Count; i++)
             {
-                strProduct += $"{products[i].ProductName} - {products[i].ProductPrice:C} \n";
+                strProduct += $"{i + 1}- {products[i].ProductName} - {products[i].ProductPrice:C} \n";
             }
             return
-                $"Order Number: \n" +
-                $"{this.orderNumber} \n" +
-                $"-- Products \n" +
+                $"Order Number: {this.orderNumber}\n" +
+                $"-- Products --\n" +
                 strProduct +
+                $"--------------\n" +
                 $"Subtotal: {SubTotal():C} \n" +
-                $"Tax: {this.tax} \n" +
+                $"Tax: {this.tax:P} \n" +
                 $"Total Tax: {SubTax():C} \n" +
                 $"Total: {(SubTotal() + SubTax()):C}";
         }

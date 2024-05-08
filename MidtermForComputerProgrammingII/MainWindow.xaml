@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:MidtermForComputerProgrammingII"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Viewbox>
+        <Grid Height="435" Width="785">
         <Rectangle HorizontalAlignment="Left" Height="402" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="249"/>
         <Label Content="Coffee" HorizontalAlignment="Left" Margin="24,23,0,0" VerticalAlignment="Top" Width="76" FontSize="18"/>
         <Label Content="Tea" HorizontalAlignment="Left" Margin="26,140,0,0" VerticalAlignment="Top" FontSize="18"/>
@@ -31,8 +32,8 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <Button x:Name="btnCompletePurchase" Content="Complete Purchase" HorizontalAlignment="Left" Margin="360,374,0,0" VerticalAlignment="Top" Click="btnCompletePurchase_Click"/>
-        <ListBox x:Name="listBoxPreviousOrders" Margin="596,61,38,351" SelectionChanged="listBoxPreviousOrders_SelectionChanged"/>
+        <Button x:Name="btnCompletePurchase" Content="Complete Purchase" HorizontalAlignment="Left" Margin="279,376,0,0" VerticalAlignment="Top" Click="btnCompletePurchase_Click"/>
+        <ComboBox x:Name="comboBoxPreviousOrders" Margin="596,62,38,351" SelectionChanged="comboBoxPreviousOrders_SelectionChanged"/>
         <RichTextBox Margin="578,94,20,77">
             <FlowDocument>
                 <Paragraph>
@@ -40,6 +41,8 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-
-    </Grid>
+        <TextBox x:Name="txtBoxIndex" HorizontalAlignment="Left" Margin="478,377,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="69"/>
+            <Button x:Name="btnRemove" Content="Remove" HorizontalAlignment="Left" Margin="425,377,0,0" VerticalAlignment="Top" Click="btnRemove_Click"/>
+        </Grid>
+    </Viewbox>
 </Window>
