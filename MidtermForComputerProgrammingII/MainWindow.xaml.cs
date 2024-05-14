@@ -156,16 +156,18 @@ namespace MidtermForComputerProgrammingII
                 MessageBox.Show("Please enter a name for your order");
                 return false;
             }
-            //Adds name to our order
-            currentOrder.CustomerName = txtBoxCustomerName.Text;
-            //Adds our finished order to our list of previous orders
-            int index = completedOrders.Count();
-            completedOrders.Add(currentOrder);
-            //Adds all products into current order
-            for (int i = 0; i < currentOrder.Products.Count; i++)
+            
+            //Creates a temporary list of products
+            List<Product> tempProducts = new List<Product>();
+            foreach (Product product in currentOrder.Products)
             {
-                completedOrders[index].Products.Add(currentOrder.Products[i]);
+                tempProducts.Add(product);
             }
+
+            //Adds name to our order
+            Order tempOrder = new Order(tempProducts, txtBoxCustomerName.Text);
+            //Adds our finished order to our list of previous orders
+            completedOrders.Add(tempOrder);
 
             comboBoxPreviousOrders.Items.Refresh();
 

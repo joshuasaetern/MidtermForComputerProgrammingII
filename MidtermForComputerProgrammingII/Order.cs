@@ -26,6 +26,12 @@ namespace MidtermForComputerProgrammingII
             this.products = new List<Product>();
             this.customerName = "NO NAME";
         }
+        public Order(List<Product> products, String customerName)
+        {
+            this.orderNumber = rand.Next(10000000, 100000000).ToString();
+            this.products = products;
+            this.customerName = customerName;
+        }
 
         //Properties
         public string OrderNumber { get => orderNumber; }
